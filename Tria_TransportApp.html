@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rizzers - Transportation App</title>
+</head>
+<body id="top" align="center">
+    <header align="center">
+        <h1>Rizzers</h1>
+        <p><em>Kahit saan, kahit kailan, parating maaasahan.</em></p>
+        <nav>
+            <a href="#book">Book a Ride</a> | 
+            <a href="#fleet">Our Vehicles</a> | 
+            <a href="#map">Map</a> | 
+            <a href="#media">Media</a> | 
+            <a href="#schedule">Schedule</a> | 
+            <a href="#contact">Contact</a>
+        </nav>
+        <hr>
+    </header>
+
+    <main align="center">
+        <section id="book" align="center">
+            <h2 align="center">Book a Ride</h2>
+            <form action="#" method="post" align="center">
+                <fieldset align="center">
+                    <legend align="center">Trip Details</legend>
+                    
+                    <p align="center">
+                        <label for="fullname">Full name:</label>
+                        <input type="text" id="fullname" name="fullname" placeholder="Juan Dela Cruz" required>
+                    </p>
+                    
+                    <p align="center">
+                        <label for="phone">Phone number:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="09XX XXX XXXX" required>
+                    </p>
+                    
+                    <p align="center">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com">
+                    </p>
+
+                    <datalist id="places">
+                        <option value="Central Terminal"></option>
+                        <option value="City Hall"></option>
+                        <option value="Airport"></option>
+                        <option value="University Campus"></option>
+                        <option value="Public Market"></option>
+                    </datalist>
+
+                    <p align="center">
+                        <label for="pickup">Pick-up location:</label>
+                        <input type="text" id="pickup" name="pickup" list="places">
+                    </p>
+                    
+                    <p align="center">
+                        <label for="dropoff">Drop-off location:</label>
+                        <input type="text" id="dropoff" name="dropoff" list="places">
+                    </p>
+                    
+                    <p align="center">
+                        <label for="date">Date:</label>
+                        <input type="date" id="date" name="date" required>
+                        
+                        <label for="time">Time:</label>
+                        <input type="time" id="time" name="time" required>
+                    </p>
+                    
+                    <p align="center">
+                        <label for="passengers">Passengers (1-10):</label>
+                        <input type="number" id="passengers" name="passengers" min="1" max="10" value="1">
+                    </p>
+                    
+                    <p align="center">
+                        <label for="vehicletype">Vehicle type:</label>
+                        <select id="vehicletype" name="vehicletype">
+                            <option value="Taxi">Taxi</option>
+                            <option value="Van">Van</option>
+                            <option value="Shuttle Bus">Shuttle Bus</option>
+                        </select>
+                    </p>
+                    
+                    <p align="center">
+                        Payment method:<br>
+                        <input type="radio" id="pay-cash" name="payment" value="Cash" checked>
+                        <label for="pay-cash">Cash</label>
+                        <input type="radio" id="pay-card" name="payment" value="Card">
+                        <label for="pay-card">Card</label>
+                        <input type="radio" id="pay-ewallet" name="payment" value="E-Wallet">
+                        <label for="pay-ewallet">E-Wallet</label>
+                    </p>
+                    
+                    <p align="center">
+                        Extras:<br>
+                        <input type="checkbox" id="extra-luggage" name="extras" value="Extra luggage">
+                        <label for="extra-luggage">Extra luggage</label><br>
+                        <input type="checkbox" id="extra-seat" name="extras" value="Child seat">
+                        <label for="extra-seat">Child seat</label><br>
+                        <input type="checkbox" id="extra-wheelchair" name="extras" value="Wheelchair accessible">
+                        <label for="extra-wheelchair">Wheelchair accessible</label>
+                    </p>
+                    
+                    <p align="center">
+                        <label for="notes">Notes for the driver:</label><br>
+                        <textarea id="notes" name="notes" rows="4" cols="40" placeholder="Landmarks, special instructions..."></textarea>
+                    </p>
+                    
+                    <p align="center">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree to the <a href="#terms-info">Terms & Conditions</a></label>
+                    </p>
+                    
+                    <p align="center">
+                        <button type="submit">Book Now</button>
+                        <button type="reset">Clear</button>
+                    </p>
+                </fieldset>
+            </form>
+            <hr>
+        </section>
+
+        <section id="fleet" align="center">
+            <h2 align="center">Our Vehicles</h2>
+            <figure align="center">
+                <img src="taxi.png" alt="A Rizzers taxi" width="400" height="250">
+                <figcaption align="center"><strong>Taxi</strong> - Fast and comfortable for up to 4 passengers.</figcaption>
+            </figure>
+            
+            <figure align="center">
+                <img src="van.png" alt="A Rizzers van" width="400" height="250">
+                <figcaption align="center"><strong>Van</strong> - Ideal for families and groups of up to 10.</figcaption>
+            </figure>
+            
+            <figure align="center">
+                <img src="shuttle.png" alt="A Rizzers shuttle bus" width="400" height="250">
+                <figcaption align="center"><strong>Shuttle Bus</strong> - Affordable fixed-route transport.</figcaption>
+            </figure>
+            
+            <p align="center"><small>Tip: replace the placeholder image links with your own photos, e.g. images/taxi.jpg</small></p>
+            <hr>
+        </section>
+
+        <section id="map" align="center">
+            <h2 align="center">Find Our Stops</h2>
+            <p align="center">Map of our main terminal (change the coordinates to your own location):</p>
+            
+            <div align="center">
+                <p align="center"><a href="https://www.openstreetmap.org/?mlat=16.4121&mlon=120.5966#map=16/16.4121/120.5966" target="_blank" rel="noopener">View larger map</a></p>
+            </div>
+
+            <h3 align="center">Image Map: Route Overview</h3>
+            <p align="center">Click a stop on the picture:</p>
+            <div align="center">
+                <img src="route.jpg" alt="Route diagram with three stops" width="600" height="200" usemap="#routemap">
+                <map name="routemap">
+                    <area shape="rect" coords="0,0,200,150" href="#schedule" alt="Terminal">
+                    <area shape="rect" coords="201,0,400,150" href="#schedule" alt="City Hall">
+                    <area shape="rect" coords="401,0,600,150" href="#schedule" alt="Airport">
+                </map>
+            </div>
+            <hr>
+        </section>
+
+        <section id="media" align="center">
+            <h2 align="center">Media</h2>
+            
+            <h3 align="center">How Rizzers Works (Video)</h3>
+            <div align="center">
+                <video width="480" controls poster="teslaroadster">
+                    <source src="teslaroadster.mp4" type="video/mp4">
+                    <source src="how_it_works.ogg" type="video/ogg">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <h3 align="center">Driver Announcement (Audio)</h3>
+            <div align="center">
+                <audio controls>
+                    <source src="teslaroadsteraudio.mp3" type="audio/mpeg">
+                    <source src="announcement.ogg" type="audio/ogg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            <h3 align="center">Watch on YouTube (Embedded)</h3>
+            <div align="center">
+                <iframe width="560" height="315" src="https://www.youtube.com/watch?v=BYWy6SyJRZo" title="YouTube video player" allowfullscreen></iframe>
+            </div>
+            <hr>
+        </section>
+
+        <section id="schedule" align="center">
+            <h2 align="center">Shuttle Schedule</h2>
+            <table border="1" cellpadding="6" cellspacing="0" align="center">
+                <caption align="center">Daily departures from Central Terminal</caption>
+                <thead>
+                    <tr>
+                        <th>Route</th>
+                        <th>Departure</th>
+                        <th>Arrival</th>
+                        <th>Fare</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Terminal &rarr; University</td>
+                        <td>6:00 AM</td>
+                        <td>6:30 AM</td>
+                        <td>₱30</td>
+                    </tr>
+                    <tr>
+                        <td>Terminal &rarr; City Hall</td>
+                        <td>7:00 AM</td>
+                        <td>7:40 AM</td>
+                        <td>₱45</td>
+                    </tr>
+                    <tr>
+                        <td>Terminal &rarr; Shopping Mall</td>
+                        <td>9:00 AM</td>
+                        <td>10:00 AM</td>
+                        <td>₱120</td>
+                    </tr>
+                    <tr>
+                        <td>Terminal &rarr; Public Market</td>
+                        <td>1:00 PM</td>
+                        <td>1:25 PM</td>
+                        <td>₱25</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br>
+            <div align="center">
+                <h3 align="center">Check Your Route</h3>
+                <form method="get" action="#" align="center">
+                    <label for="route-search">Choose a route:</label>
+                    <select id="route-search" name="route-search">
+                        <option value="University">Terminal &rarr; University</option>
+                        <option value="City Hall">Terminal &rarr; City Hall</option>
+                        <option value="Shopping Mall">Terminal &rarr; Shopping Mall</option>
+                        <option value="Public Market">Terminal &rarr; Public Market</option>
+                    </select>
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+            <hr>
+        </section>
+
+        <section id="contact" align="center">
+            <h2 align="center">Contact & Feedback</h2>
+            <form method="post" action="#" enctype="multipart/form-data" align="center">
+                <fieldset align="center">
+                    <legend align="center">Send Feedback</legend>
+                    
+                    <p align="center">
+                        <label for="feedback-name">Your name:</label><br>
+                        <input type="text" id="feedback-name" name="feedback-name" required>
+                    </p>
+                    
+                    <p align="center">
+                        <label for="rating">Rate your ride (1-5):</label>
+                        <input type="range" id="rating" name="rating" min="1" max="5" value="5">
+                    </p>
+                    
+                    <p align="center">
+                        <label for="topic">Topic:</label>
+                        <select id="topic" name="topic">
+                            <option value="Compliment">Compliment</option>
+                            <option value="Complaint">Complaint</option>
+                            <option value="Lost item">Lost item</option>
+                            <option value="Suggestion">Suggestion</option>
+                        </select>
+                    </p>
+                    
+                    <p align="center">
+                        <label for="message">Message:</label><br>
+                        <textarea id="message" name="message" rows="5" cols="40" required></textarea>
+                    </p>
+                    
+                    <p align="center">
+                        <label for="photo">Attach a photo (optional):</label><br>
+                        <input type="file" id="photo" name="photo" accept="image/*">
+                    </p>
+                    
+                    <p align="center">
+                        <button type="submit">Send Feedback</button>
+                    </p>
+                </fieldset>
+            </form>
+
+            <h3 align="center">Reach Us</h3>
+            <address align="center">
+                Rizzers Transport Co.<br>
+                General Luna, Baguio City, Philippines<br>
+                Phone: <a href="tel:+639171234567">+63 917 123 4567</a><br>
+                Email: <a href="mailto:support@rizzers.example">support@rizzers.example</a>
+            </address>
+            <hr>
+        </section>
+
+        <section id="links" align="center">
+            <h2 align="center">Useful Links</h2>
+            <ul align="center">
+                <li><a href="https://www.openstreetmap.org" target="_blank" rel="noopener">OpenStreetMap</a></li>
+                <li><a href="https://www.google.com/maps" target="_blank" rel="noopener">Google Maps</a></li>
+                <li><a href="https://www.facebook.com" target="_blank" rel="noopener">Our Facebook Page</a></li>
+                <li><a href="#top">Back to top</a></li>
+            </ul>
+        </section>
+
+        <section id="terms-info" align="center">
+            <h2 align="center">Terms & Conditions</h2>
+            <details align="center">
+                <summary align="center">Read the terms</summary>
+                <ol align="center">
+                    <li>All passengers must follow driver instructions regarding safety procedures.</li>
+                    <li>Payment should be finalized prior to drop-off unless specified otherwise.</li>
+                    <li>Rizzers Transport Co. is not liable for items left behind in the vehicles.</li>
+                </ol>
+            </details>
+        </section>
+    </main>
+
+    <footer align="center">
+        <hr>
+        <p align="center">&copy; 2026 Rizzers Transport Co. Tria.</p>
+    </footer>
+</body>
+</html>
